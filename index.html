@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuraDeep.tech | Research Portfolio</title>
+    <style>
+        :root {
+            --background: #1e1e1e;
+            --background-alt: #2a2a2a;
+            --text: #f5f5f5;
+            --text-secondary: #b0b0b0;
+            --accent: #5183f5;
+            --accent-dark: #3a66cc;
+            --border: #444444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        header {
+            background-color: var(--background-alt);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        main {
+            flex: 1;
+        }
+        
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .hero h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 0;
+        }
+        
+        .section-header .description {
+            color: var(--text-secondary);
+            margin-left: 2rem;
+            font-size: 1rem;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .category-card {
+            background-color: var(--background-alt);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+        
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .category-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.65rem 1.25rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent);
+            color: var(--text);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--text);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-dark);
+        }
+        
+        .recent-work {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .work-item {
+            background-color: var(--background-alt);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+        
+        .work-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .work-item .meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .work-item .abstract {
+            margin-bottom: 1.5rem;
+        }
+        
+        .work-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .work-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .work-links a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--background-alt);
+            color: var(--text-secondary);
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-col a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header {
+                flex-direction: column;
+            }
+            
+            .section-header .description {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">NeuraDeep.tech</a>
+                <div class="nav-links">
+                    <a href="#inquiries">Inquiries</a>
+                    <a href="#complexities">Complexities</a>
+                    <a href="#axioms">Axioms</a>
+                    <a href="#about">About</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>NeuraDeep Research</h1>
+                <p>Investigating the fundamental nature of intelligence, complexity, and existence through a multidisciplinary lens.</p>
+                <a href="#inquiries" class="btn btn-primary">Explore Research</a>
+            </div>
+        </section>
+        
+        <section id="inquiries">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Inquiries</h2>
+                    <p class="description">Technical investigations across domains</p>
+                </div>
+                <div class="categories">
+                    <div class="category-card">
+                        <h3>Cognitive Systems</h3>
+                        <p>Exploring the foundations of artificial intelligence, neural networks, and the algorithmic underpinnings of learning systems.</p>
+                        <a href="/inquiries/cognitive-systems/" class="btn">Read more</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>Biological Systems</h3>
+                        <p>Investigating life sciences and genetics, from molecular mechanisms to emergent biological phenomena.</p>
+                        <a href="/inquiries/biological-systems/" class="btn">Read more</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>Quantum Realms</h3>
+                        <p>Delving into quantum systems, computation, and the fundamental physics that govern reality at its smallest scales.</p>
+                        <a href="/inquiries/quantumrealms/" class="btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="complexities">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complexities</h2>
+                    <p class="description">Systems thinking and interdisciplinary analysis</p>
+                </div>
+                <div class="categories">
+                    <div class="category-card">
+                        <h3>Frameworks</h3>
+                        <p>Cognitive models and methodologies for solving complex problems across disciplines.</p>
+                        <a href="/complexities/frameworks/" class="btn">Read more</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>Case Files</h3>
+                        <p>Cross-disciplinary case studies examining complex problems through multiple perspectives.</p>
+                        <a href="/complexities/casefiles/" class="btn">Read more</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>Frontiers</h3>
+                        <p>Analysis of emerging global challenges at the intersection of technology, society, and environment.</p>
+                        <a href="/complexities/frontiers/" class="btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="axioms">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Axioms</h2>
+                    <p class="description">First principles and raw philosophy</p>
+                </div>
+                <div class="categories">
+                    <div class="category-card">
+                        <h3>Consciousness</h3>
+                        <p>Philosophical and scientific investigations into the nature of awareness and subjective experience.</p>
+                        <a href="/axioms/consciousness/" class="btn">Read more</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>Evolution</h3>
+                        <p>Explorations of evolutionary dynamics across biological, technological, and conceptual domains.</p>
+                        <a href="/axioms/evolution/" class="btn">Read more</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>Ontology</h3>
+                        <p>Examining fundamental questions of being, existence, and the nature of reality itself.</p>
+                        <a href="/axioms/ontology/" class="btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="recent">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent Work</h2>
+                    <p class="description">Latest research publications and technical reports</p>
+                </div>
+                <div class="recent-work">
+                    <div class="work-item">
+                        <h3>Emergent Properties in Large Language Models: A Technical Analysis</h3>
+                        <div class="meta">Published: March 2025 | Category: Cognitive Systems</div>
+                        <div class="abstract">
+                            <p>This technical report examines how certain capabilities in large language models emerge non-linearly with scale, analyzing the mathematical and architectural factors that contribute to these emergent phenomena.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="#">Read Paper</a>
+                            <a href="#">Code Repository</a>
+                            <a href="#">Supplementary Materials</a>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <h3>Quantum Coherence in Biological Systems: Revisiting the Evidence</h3>
+                        <div class="meta">Published: February 2025 | Categories: Quantum Realms, Biological Systems</div>
+                        <div class="abstract">
+                            <p>A critical analysis of current experimental evidence for quantum mechanical effects in biological processes, with focus on photosynthesis and neural microtubules.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="#">Read Paper</a>
+                            <a href="#">Experimental Data</a>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <h3>Thought Experiments on the Binding Problem of Consciousness</h3>
+                        <div class="meta">Published: January 2025 | Category: Consciousness</div>
+                        <div class="abstract">
+                            <p>A philosophical investigation into how diverse sensory inputs are integrated into unified conscious experience, proposing new thought experiments to challenge existing theories.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="#">Read Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About</h2>
+                    <p class="description">Research philosophy and background</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p style="margin-bottom: 2rem;">
+                        NeuraDeep.tech serves as a repository for interdisciplinary research, technical investigations, and philosophical explorations at the intersection of artificial intelligence, consciousness, biology, quantum mechanics, and scientific philosophy.
+                    </p>
+                    <p style="margin-bottom: 2rem;">
+                        This platform is dedicated to approaching complex questions through first principles thinking and multidisciplinary analysis. The work published here aims to contribute to our understanding of intelligence (both natural and artificial), complex systems, and the fundamental nature of reality.
+                    </p>
+                    <p style="margin-bottom: 2rem;">
+                        All research is conducted with a commitment to intellectual rigor, scientific integrity, and openness to revision based on new evidence or stronger arguments.
+                    </p>
+                    <div class="social-links" style="justify-content: center; margin-top: 3rem;">
+                        <a href="#">GitHub</a>
+                        <a href="#">Google Scholar</a>
+                        <a href="#">ResearchGate</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>NeuraDeep.tech</h3>
+                    <p>Investigating intelligence, complexity, and existence through a multidisciplinary lens.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Research Areas</h3>
+                    <ul>
+                        <li><a href="#inquiries">Inquiries</a></li>
+                        <li><a href="#complexities">Complexities</a></li>
+                        <li><a href="#axioms">Axioms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Topics</h3>
+                    <ul>
+                        <li><a href="/inquiries/cognitive-systems/">Cognitive Systems</a></li>
+                        <li><a href="/inquiries/biological-systems/">Biological Systems</a></li>
+                        <li><a href="/inquiries/quantumrealms/">Quantum Realms</a></li>
+                        <li><a href="/axioms/consciousness/">Consciousness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Code Repositories</a></li>
+                        <li><a href="#">Dataset Archive</a></li>
+                        <li><a href="#">Publication List</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NeuraDeep.tech</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
