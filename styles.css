@@ -1,124 +1,101 @@
-/* General reset and box-sizing for consistency */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and general page styling */
+/* General body and page style */
 body {
     font-family: Arial, sans-serif;
-    background-color: #2C2F36; /* Dark gray background */
-    color: #FFF; /* White text */
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f2f; /* Dark grey background */
+    color: white;
 }
 
-/* Centering the content */
 .container {
-    width: 100%;
-    max-width: 1200px; /* To keep content from stretching too wide */
-    margin: 0 auto; /* Centers the container horizontally */
-    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
 
-/* Header styling */
+/* Header styles */
 .site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .site-header h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin: 0;
+    color: white;
 }
 
 .site-header p {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-top: 10px;
-    max-width: 80%;
-    line-height: 1.8;
+    color: lightgray;
 }
 
-/* Section Styling */
+/* Section styles */
 section {
+    margin-bottom: 60px;
     padding: 40px 0;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #444; /* Subtle separation line */
+    border-bottom: 1px solid #444; /* Subtle separation line between sections */
 }
 
-/* Title for sections */
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+h2 {
+    font-size: 2.5rem;
+    color: #60a5fa; /* Soft blue for section titles */
+    margin-bottom: 30px;
     text-align: center;
 }
 
-/* Content text */
-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Links styling */
-a {
-    color: #4C8BF5; /* Stylish blue color */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Grid Layout for the homepage or sections */
-.grid-container {
+/* Grid container for card layout */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
-.grid-item {
-    background-color: #333;
-    border-radius: 8px;
+/* Individual card styles */
+.card {
+    background-color: #444; /* Lighter grey background for cards */
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.grid-item:hover {
-    transform: translateY(-10px);
+.card:hover {
+    background-color: #555; /* Slightly darker on hover */
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
-.grid-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.card h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #60a5fa; /* Soft blue color for card titles */
 }
 
-.grid-item p {
+.card p {
+    margin-top: 10px;
+    color: lightgray;
     font-size: 1rem;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #222;
-    color: #bbb;
-}
+/* Responsive design */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .site-header p {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
 
-footer a {
-    color: #4C8BF5;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    h2 {
+        font-size: 2rem;
+    }
 }
