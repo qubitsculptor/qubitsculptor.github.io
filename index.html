@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuraDeep.tech | Research & Development</title>
+    <title>NeuraDeep.tech | Research Portfolio</title>
     <style>
         :root {
             --background: #1e1e1e;
@@ -13,8 +13,6 @@
             --accent: #5183f5;
             --accent-dark: #3a66cc;
             --border: #444444;
-            --success: #4CAF50;
-            --progress: #FF9800;
         }
         
         * {
@@ -104,12 +102,6 @@
             margin-right: auto;
         }
         
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        
         section {
             padding: 4rem 0;
             border-bottom: 1px solid var(--border);
@@ -193,101 +185,6 @@
             background-color: var(--accent-dark);
         }
         
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text);
-            border: 1px solid var(--text-secondary);
-        }
-        
-        .btn-secondary:hover {
-            background-color: var(--text-secondary);
-            color: var(--background);
-            border-color: var(--text-secondary);
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background-color: var(--background-alt);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .project-image {
-            height: 200px;
-            background-color: var(--background);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .project-status {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background-color: var(--background);
-            color: var(--text);
-            padding: 0.25rem 0.75rem;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        
-        .status-active {
-            background-color: var(--success);
-        }
-        
-        .status-development {
-            background-color: var(--progress);
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .project-meta {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tag {
-            background-color: rgba(81, 131, 245, 0.2);
-            color: var(--accent);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-        }
-        
-        .project-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1.5rem;
-        }
-        
         .recent-work {
             max-width: 900px;
             margin: 0 auto;
@@ -332,67 +229,6 @@
         
         .work-links a:hover {
             text-decoration: underline;
-        }
-        
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .tool-card {
-            background-color: var(--background-alt);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .tool-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
-        
-        .tool-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-        
-        .team-section {
-            text-align: center;
-        }
-        
-        .team-members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        
-        .team-member {
-            max-width: 250px;
-        }
-        
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-        
-        .team-member h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .team-member p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
         }
         
         footer {
@@ -479,15 +315,6 @@
                 margin-left: 0;
                 margin-top: 0.5rem;
             }
-            
-            .projects {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>
@@ -497,12 +324,10 @@
             <nav>
                 <a href="/" class="logo">NeuraDeep.tech</a>
                 <div class="nav-links">
-                    <a href="#research-development">R&D</a>
                     <a href="#inquiries">Inquiries</a>
                     <a href="#complexities">Complexities</a>
                     <a href="#axioms">Axioms</a>
                     <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
                 </div>
             </nav>
         </div>
@@ -511,67 +336,9 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>NeuraDeep Research & Development</h1>
-                <p>An independent R&D hub developing innovative solutions at the intersection of AI, biosciences, and complex systems.</p>
-                <div class="hero-buttons">
-                    <a href="#research-development" class="btn btn-primary">View Active Projects</a>
-                    <a href="#inquiries" class="btn btn-secondary">Explore Knowledge Hub</a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="research-development">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Research & Development</h2>
-                    <p class="description">Innovations at the frontier of interdisciplinary science</p>
-                </div>
-                
-                <div class="projects">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="/api/placeholder/400/320" alt="RNA 3D Folding Prediction">
-                            <div class="project-status status-active">Active</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>RNA 3D Folding Prediction</h3>
-                            <div class="project-meta">Started: Jan 2025 | Lead: Research Team</div>
-                            <p>Developing neural network models for accurate RNA tertiary structure prediction using biophysical constraints and evolutionary information.</p>
-                            <div class="project-tags">
-                                <span class="tag">Deep Learning</span>
-                                <span class="tag">Molecular Biology</span>
-                                <span class="tag">Biophysics</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn">Project Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="/api/placeholder/400/320" alt="Resilient Crop Development">
-                            <div class="project-status status-development">In Development</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Resilient Crop Development</h3>
-                            <div class="project-meta">Started: Mar 2025 | Lead: Biological Systems Team</div>
-                            <p>Applying RNA structure prediction to develop crops with enhanced resilience to climate stress and disease.</p>
-                            <div class="project-tags">
-                                <span class="tag">Agricultural Tech</span>
-                                <span class="tag">Gene Expression</span>
-                                <span class="tag">Climate Adaptation</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn">Project Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="/projects/" class="btn btn-primary">View All Projects</a>
-                </div>
+                <h1>NeuraDeep Research</h1>
+                <p>Investigating the fundamental nature of intelligence, complexity, and existence through a multidisciplinary lens.</p>
+                <a href="#inquiries" class="btn btn-primary">Explore Research</a>
             </div>
         </section>
         
@@ -653,35 +420,44 @@
             </div>
         </section>
         
-        <section id="recent-work">
+        <section id="recent">
             <div class="container">
                 <div class="section-header">
                     <h2>Recent Work</h2>
-                    <p class="description">Latest research and publications</p>
+                    <p class="description">Latest research publications and technical reports</p>
                 </div>
-                
                 <div class="recent-work">
                     <div class="work-item">
-                        <h3>Optimizing Transformer Architectures for RNA Structure Prediction</h3>
-                        <div class="meta">Published: March 2025 | Authors: Research Team</div>
+                        <h3>Emergent Properties in Large Language Models: A Technical Analysis</h3>
+                        <div class="meta">Published: March 2025 | Category: Cognitive Systems</div>
                         <div class="abstract">
-                            <p>This paper explores novel approaches to RNA structure prediction using specialized transformer architectures that integrate biophysical constraints with learned evolutionary patterns. Our method demonstrates a 27% improvement in prediction accuracy compared to previous state-of-the-art models.</p>
+                            <p>This technical report examines how certain capabilities in large language models emerge non-linearly with scale, analyzing the mathematical and architectural factors that contribute to these emergent phenomena.</p>
                         </div>
                         <div class="work-links">
                             <a href="#">Read Paper</a>
-                            <a href="#">View Code Repository</a>
+                            <a href="#">Code Repository</a>
+                            <a href="#">Supplementary Materials</a>
                         </div>
                     </div>
-                    
                     <div class="work-item">
-                        <h3>Quantum-Inspired Algorithms for Complex Systems Analysis</h3>
-                        <div class="meta">Published: February 2025 | Authors: Quantum Systems Team</div>
+                        <h3>Quantum Coherence in Biological Systems: Revisiting the Evidence</h3>
+                        <div class="meta">Published: February 2025 | Categories: Quantum Realms, Biological Systems</div>
                         <div class="abstract">
-                            <p>We present a new class of quantum-inspired computational methods for modeling complex adaptive systems. These algorithms leverage principles from quantum mechanics to efficiently simulate emergent behaviors in biological and social systems.</p>
+                            <p>A critical analysis of current experimental evidence for quantum mechanical effects in biological processes, with focus on photosynthesis and neural microtubules.</p>
                         </div>
                         <div class="work-links">
                             <a href="#">Read Paper</a>
-                            <a href="#">View Code Repository</a>
+                            <a href="#">Experimental Data</a>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <h3>Thought Experiments on the Binding Problem of Consciousness</h3>
+                        <div class="meta">Published: January 2025 | Category: Consciousness</div>
+                        <div class="abstract">
+                            <p>A philosophical investigation into how diverse sensory inputs are integrated into unified conscious experience, proposing new thought experiments to challenge existing theories.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="#">Read Paper</a>
                         </div>
                     </div>
                 </div>
@@ -691,61 +467,24 @@
         <section id="about">
             <div class="container">
                 <div class="section-header">
-                    <h2>About NeuraDeep</h2>
-                    <p class="description">Our mission and approach</p>
+                    <h2>About</h2>
+                    <p class="description">Research philosophy and background</p>
                 </div>
-                
                 <div style="max-width: 800px; margin: 0 auto;">
                     <p style="margin-bottom: 2rem;">
-                        NeuraDeep.tech is an independent research and development hub that operates at the intersection of artificial intelligence, biological sciences, quantum systems, and complex systems theory. Our mission is to develop innovative solutions to fundamental challenges through interdisciplinary approaches.
+                        NeuraDeep.tech serves as a repository for interdisciplinary research, technical investigations, and philosophical explorations at the intersection of artificial intelligence, consciousness, biology, quantum mechanics, and scientific philosophy.
                     </p>
-                    
                     <p style="margin-bottom: 2rem;">
-                        We focus on projects with real-world applications, particularly in areas with significant social and environmental impact. Current priorities include RNA structure prediction for resilient crop development, quantum-inspired computational methods, and frameworks for understanding complex systems.
+                        This platform is dedicated to approaching complex questions through first principles thinking and multidisciplinary analysis. The work published here aims to contribute to our understanding of intelligence (both natural and artificial), complex systems, and the fundamental nature of reality.
                     </p>
-                    
                     <p style="margin-bottom: 2rem;">
-                        Our approach integrates cutting-edge computational methods with foundational scientific principles, building bridges between traditionally separate domains of knowledge. We believe that the most promising innovations emerge from these interdisciplinary boundaries.
+                        All research is conducted with a commitment to intellectual rigor, scientific integrity, and openness to revision based on new evidence or stronger arguments.
                     </p>
-                    
-                    <p style="margin-bottom: 3rem;">
-                        All software tools and frameworks developed at NeuraDeep are released as open-source projects to foster collaboration and accelerate scientific progress.
-                    </p>
-                    
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contact</h2>
-                    <p class="description">Get in touch with our team</p>
-                </div>
-                
-                <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-                    <p style="margin-bottom: 2rem;">
-                        Interested in our research or potential collaborations? We're always open to connecting with like-minded researchers, organizations, and funders who share our vision.
-                    </p>
-                    
-                    <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem;">
-                        <div>
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Email</h4>
-                            <p>contact@neuradeep.tech</p>
-                        </div>
-                        
-                        <div>
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Location</h4>
-                            <p>Research Center<br>Boston, MA</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links" style="justify-content: center;">
+                    <div class="social-links" style="justify-content: center; margin-top: 3rem;">
                         <a href="#">GitHub</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter</a>
                         <a href="#">Google Scholar</a>
+                        <a href="#">ResearchGate</a>
+                        <a href="#">Contact</a>
                     </div>
                 </div>
             </div>
@@ -757,44 +496,36 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>NeuraDeep.tech</h3>
-                    <p>Developing innovative solutions at the intersection of AI, biosciences, and complex systems.</p>
+                    <p>Investigating intelligence, complexity, and existence through a multidisciplinary lens.</p>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>Sections</h3>
+                    <h3>Research Areas</h3>
                     <ul>
-                        <li><a href="#research-development">R&D Projects</a></li>
                         <li><a href="#inquiries">Inquiries</a></li>
                         <li><a href="#complexities">Complexities</a></li>
                         <li><a href="#axioms">Axioms</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>Research Areas</h3>
+                    <h3>Topics</h3>
                     <ul>
                         <li><a href="/inquiries/cognitive-systems/">Cognitive Systems</a></li>
                         <li><a href="/inquiries/biological-systems/">Biological Systems</a></li>
                         <li><a href="/inquiries/quantumrealms/">Quantum Realms</a></li>
-                        <li><a href="/complexities/frameworks/">Complex Systems</a></li>
+                        <li><a href="/axioms/consciousness/">Consciousness</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Resources</h3>
                     <ul>
                         <li><a href="#">Code Repositories</a></li>
-                        <li><a href="#">Research Papers</a></li>
-                        <li><a href="#">Open Datasets</a></li>
-                        <li><a href="#">Collaboration Opportunities</a></li>
+                        <li><a href="#">Dataset Archive</a></li>
+                        <li><a href="#">Publication List</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="copyright">
-                <p>&copy; 2025 NeuraDeep.tech | All Rights Reserved</p>
+                <p>&copy; 2025 NeuraDeep.tech</p>
             </div>
         </div>
     </footer>
