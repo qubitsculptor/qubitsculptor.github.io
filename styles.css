@@ -287,3 +287,23 @@ footer {
         margin-bottom: 0.75rem;  /* Reduced margin on mobile */
     }
 }
+
+/* page-congitive-systems*/
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .read-more {
+    color: #00bfff;
+    text-decoration: underline;
+  }
+  
