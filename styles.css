@@ -23,10 +23,13 @@
   }
   
   .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
     width: 100%;
-    padding: 0 20px;
   }
   
+  /* Header styles */
   header {
     background-color: var(--background-alt);
     border-bottom: 1px solid var(--border);
@@ -65,60 +68,60 @@
     color: var(--accent);
   }
   
+  /* Site header styles */
   .site-header {
-    padding: 6rem 0 7rem; /* increased bottom padding */
+    padding: 4rem 0 3rem;
     text-align: center;
     border-bottom: 1px solid var(--border);
   }
   
   .site-header h1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--text);
     font-weight: 700;
   }
   
   .site-header p {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    max-width: 680px;
   }
   
+  /* Section styles */
   section {
-    padding: 4rem 0;
+    padding: 3rem 0 2.5rem;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 0;
   }
   
   .section-header {
     display: flex;
     align-items: baseline;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   
   h2 {
     font-size: 2rem;
     color: var(--text);
-    margin-bottom: 0;
-    text-align: left;
+    margin: 0;
     font-weight: 700;
   }
   
   .section-header .description {
     color: var(--text-secondary);
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     font-size: 1rem;
   }
   
+  /* Grid container for card layout */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
   
+  /* Individual card styles */
   .card {
     background-color: var(--background-alt);
     border: 1px solid var(--border);
@@ -132,6 +135,7 @@
   .card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
+    background-color: inherit;
   }
   
   .card h3 {
@@ -147,6 +151,7 @@
     font-size: 1rem;
   }
   
+  /* Button styles */
   .btn {
     display: inline-block;
     background-color: transparent;
@@ -185,10 +190,11 @@
     border-color: var(--text-secondary);
   }
   
+  /* Footer */
   footer {
     background-color: var(--background-alt);
     color: var(--text-secondary);
-    padding: 3rem 0;
+    padding: 2.5rem 0 2rem;
     border-top: 1px solid var(--border);
     margin-top: auto;
   }
@@ -207,17 +213,18 @@
   
   .footer-col h3 {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: var(--text);
     font-weight: 600;
   }
   
   .footer-col ul {
     list-style: none;
+    padding: 0;
   }
   
   .footer-col ul li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   
   .footer-col a {
@@ -232,11 +239,12 @@
   
   .copyright {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     color: var(--text-secondary);
     font-size: 0.9rem;
   }
   
+  /* Responsive design */
   @media (max-width: 768px) {
     .nav-links {
       display: none;
@@ -255,5 +263,4 @@
       margin-top: 0.5rem;
     }
   }
-  
   
