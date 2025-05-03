@@ -20,9 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;  /* Removed horizontal scrolling */
-    box-sizing: border-box; /* Add this to ensure padding is included in width calculations */
-}
+    overflow-x: hidden;  
+    box-sizing: border-box; 
 
 * {
     box-sizing: border-box; /* Apply to all elements */
@@ -41,7 +40,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
+    height: 80px; /* Set a fixed height for the header */
+    padding: 0 24px; /* Optional: add padding to create spacing */
+}
 }
 
 nav {
@@ -209,18 +210,18 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;  /* Reduced gap */
+    flex-wrap: nowrap;
+    gap: 1rem;  /* Reduced gap */
 }
 
 .footer-col {
-    flex: 1;
+    flex: 1 1 30%;
     min-width: 200px;
 }
 
 .footer-col h3 {
     font-size: 1.1rem;
-    margin-bottom: 1rem;  /* Reduced margin */
+    margin-bottom: 1.25rem;  /* Reduced margin */
     color: var(--text);
     font-weight: 600;
 }
@@ -273,7 +274,7 @@ footer {
     .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;  /* Reduced gap on mobile */
+        gap: 0.5rem;  /* Reduced gap on mobile */
         text-align: center;
     }
 
@@ -286,4 +287,3 @@ footer {
         margin-bottom: 0.75rem;  /* Reduced margin on mobile */
     }
 }
-  
