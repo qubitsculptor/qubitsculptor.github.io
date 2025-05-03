@@ -8,9 +8,9 @@
     --border: #444444;
     --success: #4CAF50;
     --progress: #FF9800;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -20,139 +20,140 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .container {
+    overflow-x: hidden;  /* Removed horizontal scrolling */
+}
+
+.container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
     width: 100%;
-  }
-  
-  /* Header styles */
-  header {
+}
+
+/* Header styles */
+header {
     background-color: var(--background-alt);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 100;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-  }
-  
-  .logo {
+}
+
+.logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text);
     text-decoration: none;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     display: flex;
-    gap: 2rem;
-  }
-  
-  .nav-links a {
+    gap: 1.5rem;  /* Reduced gap */
+}
+
+.nav-links a {
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 500;
     transition: color 0.2s;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     color: var(--accent);
-  }
-  
-  /* Site header styles */
-  .site-header {
-    padding: 4rem 0 3rem;
+}
+
+/* Site header styles */
+.site-header {
+    padding: 3.5rem 0 2.5rem;  /* Reduced padding */
     text-align: center;
     border-bottom: 1px solid var(--border);
-  }
-  
-  .site-header h1 {
+}
+
+.site-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--text);
     font-weight: 700;
-  }
-  
-  .site-header p {
+}
+
+.site-header p {
     font-size: 1.2rem;
     color: var(--text-secondary);
     margin: 0 auto;
     max-width: 680px;
-  }
-  
-  /* Section styles */
-  section {
-    padding: 3rem 0 2.5rem;
+}
+
+/* Section styles */
+section {
+    padding: 2.5rem 0 2rem;  /* Reduced padding */
     border-bottom: 1px solid var(--border);
-  }
-  
-  .section-header {
+}
+
+.section-header {
     display: flex;
     align-items: baseline;
-    margin-bottom: 2rem;
-  }
-  
-  h2 {
+    margin-bottom: 1.5rem;  /* Reduced margin */
+}
+
+h2 {
     font-size: 2rem;
     color: var(--text);
     margin: 0;
     font-weight: 700;
-  }
-  
-  .section-header .description {
+}
+
+.section-header .description {
     color: var(--text-secondary);
-    margin-left: 1.5rem;
+    margin-left: 1rem;  /* Reduced margin */
     font-size: 1rem;
-  }
-  
-  /* Grid container for card layout */
-  .grid {
+}
+
+/* Grid container for card layout */
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  /* Individual card styles */
-  .card {
+    gap: 1.5rem;  /* Reduced gap */
+}
+
+/* Individual card styles */
+.card {
     background-color: var(--background-alt);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 2rem;
+    padding: 1.5rem;  /* Reduced padding */
     text-decoration: none;
     color: var(--text);
     transition: transform 0.2s, border-color 0.2s;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
     background-color: inherit;
-  }
-  
-  .card h3 {
+}
+
+.card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text);
     font-weight: 600;
-  }
-  
-  .card p {
+}
+
+.card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     font-size: 1rem;
-  }
-  
-  /* Button styles */
-  .btn {
+}
+
+/* Button styles */
+.btn {
     display: inline-block;
     background-color: transparent;
     color: var(--accent);
@@ -162,105 +163,114 @@
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.2s, color 0.2s;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: var(--accent);
     color: var(--text);
-  }
-  
-  .btn-primary {
+}
+
+.btn-primary {
     background-color: var(--accent);
     color: var(--text);
-  }
-  
-  .btn-primary:hover {
+}
+
+.btn-primary:hover {
     background-color: var(--accent-dark);
-  }
-  
-  .btn-secondary {
+}
+
+.btn-secondary {
     background-color: transparent;
     color: var(--text);
     border: 1px solid var(--text-secondary);
-  }
-  
-  .btn-secondary:hover {
+}
+
+.btn-secondary:hover {
     background-color: var(--text-secondary);
     color: var(--background);
     border-color: var(--text-secondary);
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     background-color: var(--background-alt);
     color: var(--text-secondary);
-    padding: 2.5rem 0 2rem;
+    padding: 2.5rem 0 1.5rem;  /* Reduced padding */
     border-top: 1px solid var(--border);
     margin-top: auto;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .footer-col {
+    gap: 1.5rem;  /* Reduced gap */
+}
+
+.footer-col {
     flex: 1;
     min-width: 200px;
-  }
-  
-  .footer-col h3 {
+}
+
+.footer-col h3 {
     font-size: 1.1rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;  /* Reduced margin */
     color: var(--text);
     font-weight: 600;
-  }
-  
-  .footer-col ul {
+}
+
+.footer-col ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-col ul li {
+}
+
+.footer-col ul li {
     margin-bottom: 0.5rem;
-  }
-  
-  .footer-col a {
+}
+
+.footer-col a {
     color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s;
-  }
-  
-  .footer-col a:hover {
+}
+
+.footer-col a:hover {
     color: var(--accent);
-  }
-  
-  .copyright {
+}
+
+.copyright {
     text-align: center;
     margin-top: 2rem;
     color: var(--text-secondary);
     font-size: 0.9rem;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
     .nav-links {
-      display: none;
+        display: none;
     }
-  
+
     .site-header h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .section-header {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .section-header .description {
-      margin-left: 0;
-      margin-top: 0.5rem;
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
-  }
+
+    .footer-content {
+        gap: 1rem;  /* Reduced gap on mobile */
+    }
+
+    .footer-col h3 {
+        margin-bottom: 0.75rem;  /* Reduced margin on mobile */
+    }
+}
+
   
