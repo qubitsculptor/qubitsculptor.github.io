@@ -1,101 +1,269 @@
-
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --background: #1e1e1e;
+    --background-alt: #2a2a2a;
+    --text: #f5f5f5;
+    --text-secondary: #b0b0b0;
+    --accent: #5183f5;
+    --accent-dark: #3a66cc;
+    --border: #444444;
+    --success: #4CAF50;
+    --progress: #FF9800;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2f2f2f; /* Dark grey background */
-    color: white;
-}
-
-.container {
-    width: 90%;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
-}
-
-/* Header styles */
-.site-header {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.site-header h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: white;
-}
-
-.site-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: lightgray;
-}
-
-/* Section styles */
-section {
-    margin-bottom: 60px;
-    padding: 40px 0;
-    border-bottom: 1px solid #444; /* Subtle separation line between sections */
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #60a5fa; /* Soft blue for section titles */
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/* Grid container for card layout */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-/* Individual card styles */
-.card {
-    background-color: #444; /* Lighter grey background for cards */
-    padding: 20px;
-    border-radius: 8px;
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: var(--background-alt);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
     text-decoration: none;
-    color: white;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.card:hover {
-    background-color: #555; /* Slightly darker on hover */
-    transform: scale(1.05); /* Zoom effect on hover */
-}
-
-.card h3 {
-    font-size: 1.6rem;
-    margin: 0;
-    color: #60a5fa; /* Soft blue color for card titles */
-}
-
-.card p {
-    margin-top: 10px;
-    color: lightgray;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+  
+  /* Site header styles */
+  .site-header {
+    padding: 6rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .site-header h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+    font-weight: 700;
+  }
+  
+  .site-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: 700;
+  }
+  
+  .section-header .description {
+    color: var(--text-secondary);
+    margin-left: 2rem;
     font-size: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
+  }
+  
+  /* Grid container for card layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Individual card styles */
+  .card {
+    background-color: var(--background-alt);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent); 
+    /* Remove background color change on hover */
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text); /* Changed from blue to white */
+    font-weight: 600;
+  }
+  
+  .card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Button styles */
+  .btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.65rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: var(--accent);
+    color: var(--text);
+  }
+  
+  .btn-primary {
+    background-color: var(--accent);
+    color: var(--text);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--accent-dark);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--text-secondary);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--text-secondary);
+    color: var(--background);
+    border-color: var(--text-secondary);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--background-alt);
+    color: var(--text-secondary);
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-col {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-col h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-col a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer-col a:hover {
+    color: var(--accent);
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
     .site-header h1 {
-        font-size: 2.5rem;
+      font-size: 2rem;
     }
     
-    .site-header p {
-        font-size: 1rem;
+    .section-header {
+      flex-direction: column;
     }
     
-    section {
-        padding: 30px 0;
+    .section-header .description {
+      margin-left: 0;
+      margin-top: 0.5rem;
     }
-
-    h2 {
-        font-size: 2rem;
-    }
+  }
 }
