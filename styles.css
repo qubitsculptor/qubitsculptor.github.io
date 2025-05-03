@@ -21,13 +21,17 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;  /* Removed horizontal scrolling */
+    box-sizing: border-box; /* Add this to ensure padding is included in width calculations */
+}
+
+* {
+    box-sizing: border-box; /* Apply to all elements */
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 24px;
     width: 100%;
+    margin: 0 auto;
+    padding: 0 16px; /* Reduced padding for better edge-to-edge usage */
 }
 
 /* Header styles */
@@ -37,6 +41,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 
 nav {
@@ -198,6 +203,7 @@ footer {
     padding: 2.5rem 0 1.5rem;  /* Reduced padding */
     border-top: 1px solid var(--border);
     margin-top: auto;
+    width: 100%;
 }
 
 .footer-content {
@@ -265,12 +271,19 @@ footer {
     }
 
     .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1rem;  /* Reduced gap on mobile */
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 1rem;
+        min-width: unset; /* Remove the min-width restriction */
     }
 
     .footer-col h3 {
         margin-bottom: 0.75rem;  /* Reduced margin on mobile */
     }
 }
-
   
